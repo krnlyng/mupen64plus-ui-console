@@ -274,22 +274,24 @@ static m64p_error OpenConfigurationHandles(void)
         {
             DebugMessage(M64MSG_VERBOSE, "Setting default config values for the Jolla Tablet");
             /* Set default values for my Config parameters */
-            (*ConfigSetDefaultString)(l_ConfigUI, "VideoPlugin", "mupen64plus-video-rice" OSAL_DLL_EXTENSION, "Filename of video plugin");
+            (*ConfigSetDefaultString)(l_ConfigUI, "VideoPlugin", "mupen64plus-video-glide64mk2" OSAL_DLL_EXTENSION, "Filename of video plugin");
             (*ConfigSetDefaultString)(l_ConfigUI, "AudioPlugin", "mupen64plus-audio-sdl" OSAL_DLL_EXTENSION, "Filename of audio plugin");
             (*ConfigSetDefaultString)(l_ConfigUI, "InputPlugin", "mupen64plus-input-sdltouch" OSAL_DLL_EXTENSION, "Filename of input plugin");
             (*ConfigSetDefaultString)(l_ConfigUI, "RspPlugin", "mupen64plus-rsp-hle" OSAL_DLL_EXTENSION, "Filename of RSP plugin");
 
             (*ConfigSetDefaultInt)(l_ConfigVideo, "ScreenWidth", 2048, "Width of output window or fullscreen width");
             (*ConfigSetDefaultInt)(l_ConfigVideo, "ScreenHeight", 1536, "Height of output window or fullscreen height");
-            (*ConfigSetDefaultInt)(l_ConfigVideo, "Rotate", 0, "Rotate screen contents: 0=0 degree, 1=90 degree, 2 = 180 degree, 3=270 degree");
+            (*ConfigSetDefaultInt)(l_ConfigVideo, "Rotate", 3, "Rotate screen contents: 0=0 degree, 1=90 degree, 2 = 180 degree, 3=270 degree");
+
+            (*ConfigSetDefaultInt)(l_ConfigVideoGlide64mk2, "aspect", 2, "Aspect ratio: -1=Game default, 0=Force 4:3, 1=Force 16:9, 2=Stretch, 3=Original");
         }
         else
         {
             DebugMessage(M64MSG_VERBOSE, "Setting default config values.");
             /* Set default values for my Config parameters */
-            (*ConfigSetDefaultString)(l_ConfigUI, "VideoPlugin", "mupen64plus-video-rice" OSAL_DLL_EXTENSION, "Filename of video plugin");
+            (*ConfigSetDefaultString)(l_ConfigUI, "VideoPlugin", "mupen64plus-video-glide64mk2" OSAL_DLL_EXTENSION, "Filename of video plugin");
             (*ConfigSetDefaultString)(l_ConfigUI, "AudioPlugin", "mupen64plus-audio-sdl" OSAL_DLL_EXTENSION, "Filename of audio plugin");
-            (*ConfigSetDefaultString)(l_ConfigUI, "InputPlugin", "mupen64plus-input-sdl" OSAL_DLL_EXTENSION, "Filename of input plugin");
+            (*ConfigSetDefaultString)(l_ConfigUI, "InputPlugin", "mupen64plus-input-sdltouch" OSAL_DLL_EXTENSION, "Filename of input plugin");
             (*ConfigSetDefaultString)(l_ConfigUI, "RspPlugin", "mupen64plus-rsp-hle" OSAL_DLL_EXTENSION, "Filename of RSP plugin");
         }
 
@@ -297,10 +299,14 @@ static m64p_error OpenConfigurationHandles(void)
     }
     else
     {
-        (*ConfigSetDefaultString)(l_ConfigUI, "VideoPlugin", "mupen64plus-video-rice" OSAL_DLL_EXTENSION, "Filename of video plugin");
+        (*ConfigSetDefaultString)(l_ConfigUI, "VideoPlugin", "mupen64plus-video-glide64mk2" OSAL_DLL_EXTENSION, "Filename of video plugin");
         (*ConfigSetDefaultString)(l_ConfigUI, "AudioPlugin", "mupen64plus-audio-sdl" OSAL_DLL_EXTENSION, "Filename of audio plugin");
-        (*ConfigSetDefaultString)(l_ConfigUI, "InputPlugin", "mupen64plus-input-sdl" OSAL_DLL_EXTENSION, "Filename of input plugin");
+        (*ConfigSetDefaultString)(l_ConfigUI, "InputPlugin", "mupen64plus-input-sdltouch" OSAL_DLL_EXTENSION, "Filename of input plugin");
         (*ConfigSetDefaultString)(l_ConfigUI, "RspPlugin", "mupen64plus-rsp-hle" OSAL_DLL_EXTENSION, "Filename of RSP plugin");
+
+        (*ConfigSetDefaultInt)(l_ConfigVideo, "Rotate", 3, "Rotate screen contents: 0=0 degree, 1=90 degree, 2 = 180 degree, 3=270 degree");
+
+        (*ConfigSetDefaultInt)(l_ConfigVideoGlide64mk2, "aspect", 2, "Aspect ratio: -1=Game default, 0=Force 4:3, 1=Force 16:9, 2=Stretch, 3=Original");
     }
 
     if (bSaveConfig && ConfigSaveSection != NULL) /* ConfigSaveSection was added in Config API v2.1.0 */
