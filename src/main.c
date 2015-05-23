@@ -51,6 +51,7 @@ static m64p_handle l_ConfigCore = NULL;
 static m64p_handle l_ConfigVideo = NULL;
 static m64p_handle l_ConfigUI = NULL;
 static m64p_handle l_ConfigVideoGlide64mk2 = NULL;
+static m64p_handle l_ConfigVideoGLideN64 = NULL;
 
 static const char *l_CoreLibPath = NULL;
 static const char *l_ConfigDirPath = NULL;
@@ -225,6 +226,13 @@ static m64p_error OpenConfigurationHandles(void)
         return rval;
     }
 
+    rval = (*ConfigOpenSection)("Video-GLideN64", &l_ConfigVideoGLideN64);
+    if (rval != M64ERR_SUCCESS)
+    {
+        DebugMessage(M64MSG_ERROR, "failed to open 'Video-GLideN64' configuration section");
+        return rval;
+    }
+
     if ((*ConfigGetParameter)(l_ConfigUI, "Version", M64TYPE_FLOAT, &fConfigParamsVersion, sizeof(float)) != M64ERR_SUCCESS)
     {
         DebugMessage(M64MSG_WARNING, "No version number in 'UI-Console' config section. Setting defaults.");
@@ -269,6 +277,8 @@ static m64p_error OpenConfigurationHandles(void)
             (*ConfigSetDefaultInt)(l_ConfigVideo, "Rotate", 3, "Rotate screen contents: 0=0 degree, 1=90 degree, 2 = 180 degree, 3=270 degree");
 
             (*ConfigSetDefaultInt)(l_ConfigVideoGlide64mk2, "aspect", 2, "Aspect ratio: -1=Game default, 0=Force 4:3, 1=Force 16:9, 2=Stretch, 3=Original");
+
+            (*ConfigSetDefaultBool)(l_ConfigVideoGLideN64, "EnableFBEmulation", 0, "Enable frame and|or depth buffer emulation.");
         }
         else if(strcmp(product_id, "tbj") == 0)
         {
@@ -284,6 +294,8 @@ static m64p_error OpenConfigurationHandles(void)
             (*ConfigSetDefaultInt)(l_ConfigVideo, "Rotate", 3, "Rotate screen contents: 0=0 degree, 1=90 degree, 2 = 180 degree, 3=270 degree");
 
             (*ConfigSetDefaultInt)(l_ConfigVideoGlide64mk2, "aspect", 2, "Aspect ratio: -1=Game default, 0=Force 4:3, 1=Force 16:9, 2=Stretch, 3=Original");
+
+            (*ConfigSetDefaultBool)(l_ConfigVideoGLideN64, "EnableFBEmulation", 0, "Enable frame and|or depth buffer emulation.");
         }
         else
         {
@@ -297,6 +309,8 @@ static m64p_error OpenConfigurationHandles(void)
             (*ConfigSetDefaultInt)(l_ConfigVideo, "Rotate", 3, "Rotate screen contents: 0=0 degree, 1=90 degree, 2 = 180 degree, 3=270 degree");
 
             (*ConfigSetDefaultInt)(l_ConfigVideoGlide64mk2, "aspect", 2, "Aspect ratio: -1=Game default, 0=Force 4:3, 1=Force 16:9, 2=Stretch, 3=Original");
+
+            (*ConfigSetDefaultBool)(l_ConfigVideoGLideN64, "EnableFBEmulation", 0, "Enable frame and|or depth buffer emulation.");
         }
 
         if(product_id != NULL) free(product_id);
