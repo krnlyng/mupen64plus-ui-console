@@ -284,7 +284,7 @@ static m64p_error OpenConfigurationHandles(void)
         {
             DebugMessage(M64MSG_VERBOSE, "Setting default config values for the Jolla Tablet");
             /* Set default values for my Config parameters */
-            (*ConfigSetDefaultString)(l_ConfigUI, "VideoPlugin", "mupen64plus-video-glide64mk2" OSAL_DLL_EXTENSION, "Filename of video plugin");
+            (*ConfigSetDefaultString)(l_ConfigUI, "VideoPlugin", "mupen64plus-video-GLideN64" OSAL_DLL_EXTENSION, "Filename of video plugin");
             (*ConfigSetDefaultString)(l_ConfigUI, "AudioPlugin", "mupen64plus-audio-sdl" OSAL_DLL_EXTENSION, "Filename of audio plugin");
             (*ConfigSetDefaultString)(l_ConfigUI, "InputPlugin", "mupen64plus-input-sdltouch" OSAL_DLL_EXTENSION, "Filename of input plugin");
             (*ConfigSetDefaultString)(l_ConfigUI, "RspPlugin", "mupen64plus-rsp-hle" OSAL_DLL_EXTENSION, "Filename of RSP plugin");
@@ -299,7 +299,7 @@ static m64p_error OpenConfigurationHandles(void)
         }
         else if (strcmp(product_id, "hammerhead") == 0)
         {
-            DebugMessage(M64MSG_VERBOSE, "Setting default config values for the Jolla Phone");
+            DebugMessage(M64MSG_VERBOSE, "Setting default config values for the Nexus 5");
             /* Set default values for my Config parameters */
             (*ConfigSetDefaultString)(l_ConfigUI, "VideoPlugin", "mupen64plus-video-glide64mk2" OSAL_DLL_EXTENSION, "Filename of video plugin");
             (*ConfigSetDefaultString)(l_ConfigUI, "AudioPlugin", "mupen64plus-audio-sdl" OSAL_DLL_EXTENSION, "Filename of audio plugin");
