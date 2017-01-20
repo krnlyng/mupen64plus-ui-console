@@ -263,7 +263,24 @@ static m64p_error OpenConfigurationHandles(void)
     char *product_id = GetProductID();
     if (product_id != NULL)
     {
-        if (strcmp(product_id, "sbj") == 0)
+        if (strcmp(product_id, "l500d") == 0)
+        {
+            DebugMessage(M64MSG_VERBOSE, "Setting default config values for the Jolla C");
+            /* Set default values for my Config parameters */
+            (*ConfigSetDefaultString)(l_ConfigUI, "VideoPlugin", "mupen64plus-video-glide64mk2" OSAL_DLL_EXTENSION, "Filename of video plugin");
+            (*ConfigSetDefaultString)(l_ConfigUI, "AudioPlugin", "mupen64plus-audio-sdl" OSAL_DLL_EXTENSION, "Filename of audio plugin");
+            (*ConfigSetDefaultString)(l_ConfigUI, "InputPlugin", "mupen64plus-input-sdltouch" OSAL_DLL_EXTENSION, "Filename of input plugin");
+            (*ConfigSetDefaultString)(l_ConfigUI, "RspPlugin", "mupen64plus-rsp-hle" OSAL_DLL_EXTENSION, "Filename of RSP plugin");
+
+            (*ConfigSetDefaultInt)(l_ConfigVideo, "ScreenWidth", 720, "Width of output window or fullscreen width");
+            (*ConfigSetDefaultInt)(l_ConfigVideo, "ScreenHeight", 1280, "Height of output window or fullscreen height");
+            (*ConfigSetDefaultInt)(l_ConfigVideo, "Rotate", 3, "Rotate screen contents: 0=0 degree, 1=90 degree, 2 = 180 degree, 3=270 degree");
+
+            (*ConfigSetDefaultInt)(l_ConfigVideoGlide64mk2, "aspect", 2, "Aspect ratio: -1=Game default, 0=Force 4:3, 1=Force 16:9, 2=Stretch, 3=Original");
+
+            (*ConfigSetDefaultBool)(l_ConfigVideoGLideN64, "EnableFBEmulation", 0, "Enable frame and|or depth buffer emulation.");
+        }
+        else if (strcmp(product_id, "sbj") == 0)
         {
             DebugMessage(M64MSG_VERBOSE, "Setting default config values for the Jolla Phone");
             /* Set default values for my Config parameters */
