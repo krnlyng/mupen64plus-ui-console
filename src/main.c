@@ -278,7 +278,7 @@ static m64p_error OpenConfigurationHandles(void)
 
             (*ConfigSetDefaultInt)(l_ConfigVideoGlide64mk2, "aspect", 2, "Aspect ratio: -1=Game default, 0=Force 4:3, 1=Force 16:9, 2=Stretch, 3=Original");
 
-            (*ConfigSetDefaultBool)(l_ConfigVideoGLideN64, "EnableFBEmulation", 0, "Enable frame and|or depth buffer emulation.");
+            (*ConfigSetDefaultBool)(l_ConfigVideoGLideN64, "EnableLegacyBlending", 1, "Do not use shaders to emulate N64 blending modes. Works faster on slow GPU. Can cause glitches.");
         }
         else if (strcmp(product_id, "sbj") == 0)
         {
@@ -295,7 +295,7 @@ static m64p_error OpenConfigurationHandles(void)
 
             (*ConfigSetDefaultInt)(l_ConfigVideoGlide64mk2, "aspect", 2, "Aspect ratio: -1=Game default, 0=Force 4:3, 1=Force 16:9, 2=Stretch, 3=Original");
 
-            (*ConfigSetDefaultBool)(l_ConfigVideoGLideN64, "EnableFBEmulation", 0, "Enable frame and|or depth buffer emulation.");
+            (*ConfigSetDefaultBool)(l_ConfigVideoGLideN64, "EnableLegacyBlending", 1, "Do not use shaders to emulate N64 blending modes. Works faster on slow GPU. Can cause glitches.");
         }
         else if(strcmp(product_id, "tbj") == 0)
         {
@@ -312,7 +312,7 @@ static m64p_error OpenConfigurationHandles(void)
 
             (*ConfigSetDefaultInt)(l_ConfigVideoGlide64mk2, "aspect", 2, "Aspect ratio: -1=Game default, 0=Force 4:3, 1=Force 16:9, 2=Stretch, 3=Original");
 
-            (*ConfigSetDefaultBool)(l_ConfigVideoGLideN64, "EnableFBEmulation", 0, "Enable frame and|or depth buffer emulation.");
+            (*ConfigSetDefaultBool)(l_ConfigVideoGLideN64, "EnableLegacyBlending", 1, "Do not use shaders to emulate N64 blending modes. Works faster on slow GPU. Can cause glitches.");
         }
         else if (strcmp(product_id, "hammerhead") == 0)
         {
@@ -329,7 +329,7 @@ static m64p_error OpenConfigurationHandles(void)
 
             (*ConfigSetDefaultInt)(l_ConfigVideoGlide64mk2, "aspect", 2, "Aspect ratio: -1=Game default, 0=Force 4:3, 1=Force 16:9, 2=Stretch, 3=Original");
 
-            (*ConfigSetDefaultBool)(l_ConfigVideoGLideN64, "EnableFBEmulation", 0, "Enable frame and|or depth buffer emulation.");
+            (*ConfigSetDefaultBool)(l_ConfigVideoGLideN64, "EnableLegacyBlending", 1, "Do not use shaders to emulate N64 blending modes. Works faster on slow GPU. Can cause glitches.");
         }
         else
         {
@@ -344,7 +344,7 @@ static m64p_error OpenConfigurationHandles(void)
 
             (*ConfigSetDefaultInt)(l_ConfigVideoGlide64mk2, "aspect", 2, "Aspect ratio: -1=Game default, 0=Force 4:3, 1=Force 16:9, 2=Stretch, 3=Original");
 
-            (*ConfigSetDefaultBool)(l_ConfigVideoGLideN64, "EnableFBEmulation", 0, "Enable frame and|or depth buffer emulation.");
+            (*ConfigSetDefaultBool)(l_ConfigVideoGLideN64, "EnableLegacyBlending", 1, "Do not use shaders to emulate N64 blending modes. Works faster on slow GPU. Can cause glitches.")
         }
 
         if(product_id != NULL) free(product_id);
