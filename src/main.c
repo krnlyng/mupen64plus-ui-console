@@ -278,9 +278,15 @@ static m64p_error OpenConfigurationHandles(void)
 
             (*ConfigSetDefaultInt)(l_ConfigVideoGlide64mk2, "aspect", 2, "Aspect ratio: -1=Game default, 0=Force 4:3, 1=Force 16:9, 2=Stretch, 3=Original");
 
+            (*ConfigSetDefaultBool)(l_ConfigVideoGlide64mk2, "force_polygon_offset", 1, "If true, use polygon offset values specified below");
+            (*ConfigSetDefaultBool)(l_ConfigVideoGlide64mk2, "polygon_offset_factor", -0.25, "Specifies a scale factor that is used to create a variable depth offset for each polygon");
+            (*ConfigSetDefaultBool)(l_ConfigVideoGlide64mk2, "polygon_offset_units", -0.25, "Is multiplied by an implementation-specific value to create a constant depth offset");
+
 	    (*ConfigSetDefaultBool)(l_ConfigVideoGLideN64, "EnableFBEmulation", 0, "Enable frame and|or depth buffer emulation.");
             (*ConfigSetDefaultBool)(l_ConfigVideoGLideN64, "EnableLegacyBlending", 1, "Do not use shaders to emulate N64 blending modes. Works faster on slow GPU. Can cause glitches.");
             (*ConfigSetDefaultInt)(l_ConfigVideoGLideN64, "AspectRatio", 0, "Screen aspect ratio (0=stretch, 1=force 4:3, 2=force 16:9, 3=adjust)");
+
+            (*ConfigSetDefaultBool)(l_ConfigVideoGLideN64, "EnableFBEmulation", 0, "Enable frame and|or depth buffer emulation.");
         }
         else if (strcmp(product_id, "sbj") == 0)
         {
@@ -297,9 +303,15 @@ static m64p_error OpenConfigurationHandles(void)
 
             (*ConfigSetDefaultInt)(l_ConfigVideoGlide64mk2, "aspect", 2, "Aspect ratio: -1=Game default, 0=Force 4:3, 1=Force 16:9, 2=Stretch, 3=Original");
 
+            (*ConfigSetDefaultBool)(l_ConfigVideoGlide64mk2, "force_polygon_offset", 1, "If true, use polygon offset values specified below");
+            (*ConfigSetDefaultBool)(l_ConfigVideoGlide64mk2, "polygon_offset_factor", -0.25, "Specifies a scale factor that is used to create a variable depth offset for each polygon");
+            (*ConfigSetDefaultBool)(l_ConfigVideoGlide64mk2, "polygon_offset_units", -0.25, "Is multiplied by an implementation-specific value to create a constant depth offset");
+
 	    (*ConfigSetDefaultBool)(l_ConfigVideoGLideN64, "EnableFBEmulation", 0, "Enable frame and|or depth buffer emulation.");
             (*ConfigSetDefaultBool)(l_ConfigVideoGLideN64, "EnableLegacyBlending", 1, "Do not use shaders to emulate N64 blending modes. Works faster on slow GPU. Can cause glitches.");
             (*ConfigSetDefaultInt)(l_ConfigVideoGLideN64, "AspectRatio", 0, "Screen aspect ratio (0=stretch, 1=force 4:3, 2=force 16:9, 3=adjust)");
+
+            (*ConfigSetDefaultBool)(l_ConfigVideoGLideN64, "EnableFBEmulation", 0, "Enable frame and|or depth buffer emulation.");
         }
         else if(strcmp(product_id, "tbj") == 0)
         {
@@ -315,10 +327,15 @@ static m64p_error OpenConfigurationHandles(void)
             (*ConfigSetDefaultInt)(l_ConfigVideo, "Rotate", 3, "Rotate screen contents: 0=0 degree, 1=90 degree, 2 = 180 degree, 3=270 degree");
 
             (*ConfigSetDefaultInt)(l_ConfigVideoGlide64mk2, "aspect", 2, "Aspect ratio: -1=Game default, 0=Force 4:3, 1=Force 16:9, 2=Stretch, 3=Original");
+            (*ConfigSetDefaultBool)(l_ConfigVideoGlide64mk2, "force_polygon_offset", 1, "If true, use polygon offset values specified below");
+            (*ConfigSetDefaultBool)(l_ConfigVideoGlide64mk2, "polygon_offset_factor", -0.25, "Specifies a scale factor that is used to create a variable depth offset for each polygon");
+            (*ConfigSetDefaultBool)(l_ConfigVideoGlide64mk2, "polygon_offset_units", -0.25, "Is multiplied by an implementation-specific value to create a constant depth offset");
 
 	    (*ConfigSetDefaultBool)(l_ConfigVideoGLideN64, "EnableFBEmulation", 0, "Enable frame and|or depth buffer emulation.");
             (*ConfigSetDefaultBool)(l_ConfigVideoGLideN64, "EnableLegacyBlending", 1, "Do not use shaders to emulate N64 blending modes. Works faster on slow GPU. Can cause glitches.");
             (*ConfigSetDefaultInt)(l_ConfigVideoGLideN64, "AspectRatio", 0, "Screen aspect ratio (0=stretch, 1=force 4:3, 2=force 16:9, 3=adjust)");
+
+            (*ConfigSetDefaultBool)(l_ConfigVideoGLideN64, "EnableFBEmulation", 0, "Enable frame and|or depth buffer emulation.");
         }
         else if (strcmp(product_id, "hammerhead") == 0)
         {
@@ -334,10 +351,15 @@ static m64p_error OpenConfigurationHandles(void)
             (*ConfigSetDefaultInt)(l_ConfigVideo, "Rotate", 3, "Rotate screen contents: 0=0 degree, 1=90 degree, 2 = 180 degree, 3=270 degree");
 
             (*ConfigSetDefaultInt)(l_ConfigVideoGlide64mk2, "aspect", 2, "Aspect ratio: -1=Game default, 0=Force 4:3, 1=Force 16:9, 2=Stretch, 3=Original");
+            (*ConfigSetDefaultBool)(l_ConfigVideoGlide64mk2, "force_polygon_offset", 1, "If true, use polygon offset values specified below");
+            (*ConfigSetDefaultBool)(l_ConfigVideoGlide64mk2, "polygon_offset_factor", -0.25, "Specifies a scale factor that is used to create a variable depth offset for each polygon");
+            (*ConfigSetDefaultBool)(l_ConfigVideoGlide64mk2, "polygon_offset_units", -0.25, "Is multiplied by an implementation-specific value to create a constant depth offset");
 
 	    (*ConfigSetDefaultBool)(l_ConfigVideoGLideN64, "EnableFBEmulation", 0, "Enable frame and|or depth buffer emulation.");
             (*ConfigSetDefaultBool)(l_ConfigVideoGLideN64, "EnableLegacyBlending", 1, "Do not use shaders to emulate N64 blending modes. Works faster on slow GPU. Can cause glitches.");
             (*ConfigSetDefaultInt)(l_ConfigVideoGLideN64, "AspectRatio", 0, "Screen aspect ratio (0=stretch, 1=force 4:3, 2=force 16:9, 3=adjust)");
+
+            (*ConfigSetDefaultBool)(l_ConfigVideoGLideN64, "EnableFBEmulation", 0, "Enable frame and|or depth buffer emulation.");
         }
         else
         {
@@ -351,10 +373,15 @@ static m64p_error OpenConfigurationHandles(void)
             (*ConfigSetDefaultInt)(l_ConfigVideo, "Rotate", 3, "Rotate screen contents: 0=0 degree, 1=90 degree, 2 = 180 degree, 3=270 degree");
 
             (*ConfigSetDefaultInt)(l_ConfigVideoGlide64mk2, "aspect", 2, "Aspect ratio: -1=Game default, 0=Force 4:3, 1=Force 16:9, 2=Stretch, 3=Original");
+            (*ConfigSetDefaultBool)(l_ConfigVideoGlide64mk2, "force_polygon_offset", 1, "If true, use polygon offset values specified below");
+            (*ConfigSetDefaultBool)(l_ConfigVideoGlide64mk2, "polygon_offset_factor", -0.25, "Specifies a scale factor that is used to create a variable depth offset for each polygon");
+            (*ConfigSetDefaultBool)(l_ConfigVideoGlide64mk2, "polygon_offset_units", -0.25, "Is multiplied by an implementation-specific value to create a constant depth offset");
 
 	    (*ConfigSetDefaultBool)(l_ConfigVideoGLideN64, "EnableFBEmulation", 0, "Enable frame and|or depth buffer emulation.");
             (*ConfigSetDefaultBool)(l_ConfigVideoGLideN64, "EnableLegacyBlending", 1, "Do not use shaders to emulate N64 blending modes. Works faster on slow GPU. Can cause glitches.");
             (*ConfigSetDefaultInt)(l_ConfigVideoGLideN64, "AspectRatio", 0, "Screen aspect ratio (0=stretch, 1=force 4:3, 2=force 16:9, 3=adjust)");
+
+            (*ConfigSetDefaultBool)(l_ConfigVideoGLideN64, "EnableFBEmulation", 0, "Enable frame and|or depth buffer emulation.");
         }
 
         if(product_id != NULL) free(product_id);
