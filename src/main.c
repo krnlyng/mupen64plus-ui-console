@@ -279,7 +279,7 @@ static m64p_error OpenConfigurationHandles(void)
             (*ConfigSetDefaultInt)(l_ConfigVideoGlide64mk2, "aspect", 2, "Aspect ratio: -1=Game default, 0=Force 4:3, 1=Force 16:9, 2=Stretch, 3=Original");
 
             (*ConfigSetDefaultBool)(l_ConfigVideoGLideN64, "EnableLegacyBlending", 1, "Do not use shaders to emulate N64 blending modes. Works faster on slow GPU. Can cause glitches.");
-            (*ConfigSetDefaultInt)(l_ConfigVideoGlideN64, "AspectRatio", 0, "Screen aspect ratio (0=stretch, 1=force 4:3, 2=force 16:9, 3=adjust)");
+            (*ConfigSetDefaultInt)(l_ConfigVideoGLideN64, "AspectRatio", 0, "Screen aspect ratio (0=stretch, 1=force 4:3, 2=force 16:9, 3=adjust)");
         }
         else if (strcmp(product_id, "sbj") == 0)
         {
@@ -297,7 +297,7 @@ static m64p_error OpenConfigurationHandles(void)
             (*ConfigSetDefaultInt)(l_ConfigVideoGlide64mk2, "aspect", 2, "Aspect ratio: -1=Game default, 0=Force 4:3, 1=Force 16:9, 2=Stretch, 3=Original");
 
             (*ConfigSetDefaultBool)(l_ConfigVideoGLideN64, "EnableLegacyBlending", 1, "Do not use shaders to emulate N64 blending modes. Works faster on slow GPU. Can cause glitches.");
-            (*ConfigSetDefaultInt)(l_ConfigVideoGlideN64, "AspectRatio", 0, "Screen aspect ratio (0=stretch, 1=force 4:3, 2=force 16:9, 3=adjust)");
+            (*ConfigSetDefaultInt)(l_ConfigVideoGLideN64, "AspectRatio", 0, "Screen aspect ratio (0=stretch, 1=force 4:3, 2=force 16:9, 3=adjust)");
         }
         else if(strcmp(product_id, "tbj") == 0)
         {
@@ -315,7 +315,7 @@ static m64p_error OpenConfigurationHandles(void)
             (*ConfigSetDefaultInt)(l_ConfigVideoGlide64mk2, "aspect", 2, "Aspect ratio: -1=Game default, 0=Force 4:3, 1=Force 16:9, 2=Stretch, 3=Original");
 
             (*ConfigSetDefaultBool)(l_ConfigVideoGLideN64, "EnableLegacyBlending", 1, "Do not use shaders to emulate N64 blending modes. Works faster on slow GPU. Can cause glitches.");
-            (*ConfigSetDefaultInt)(l_ConfigVideoGlideN64, "AspectRatio", 0, "Screen aspect ratio (0=stretch, 1=force 4:3, 2=force 16:9, 3=adjust)");
+            (*ConfigSetDefaultInt)(l_ConfigVideoGLideN64, "AspectRatio", 0, "Screen aspect ratio (0=stretch, 1=force 4:3, 2=force 16:9, 3=adjust)");
         }
         else if (strcmp(product_id, "hammerhead") == 0)
         {
@@ -333,7 +333,7 @@ static m64p_error OpenConfigurationHandles(void)
             (*ConfigSetDefaultInt)(l_ConfigVideoGlide64mk2, "aspect", 2, "Aspect ratio: -1=Game default, 0=Force 4:3, 1=Force 16:9, 2=Stretch, 3=Original");
 
             (*ConfigSetDefaultBool)(l_ConfigVideoGLideN64, "EnableLegacyBlending", 1, "Do not use shaders to emulate N64 blending modes. Works faster on slow GPU. Can cause glitches.");
-            (*ConfigSetDefaultInt)(l_ConfigVideoGlideN64, "AspectRatio", 0, "Screen aspect ratio (0=stretch, 1=force 4:3, 2=force 16:9, 3=adjust)");
+            (*ConfigSetDefaultInt)(l_ConfigVideoGLideN64, "AspectRatio", 0, "Screen aspect ratio (0=stretch, 1=force 4:3, 2=force 16:9, 3=adjust)");
         }
         else
         {
@@ -349,7 +349,7 @@ static m64p_error OpenConfigurationHandles(void)
             (*ConfigSetDefaultInt)(l_ConfigVideoGlide64mk2, "aspect", 2, "Aspect ratio: -1=Game default, 0=Force 4:3, 1=Force 16:9, 2=Stretch, 3=Original");
 
             (*ConfigSetDefaultBool)(l_ConfigVideoGLideN64, "EnableLegacyBlending", 1, "Do not use shaders to emulate N64 blending modes. Works faster on slow GPU. Can cause glitches.");
-            (*ConfigSetDefaultInt)(l_ConfigVideoGlideN64, "AspectRatio", 0, "Screen aspect ratio (0=stretch, 1=force 4:3, 2=force 16:9, 3=adjust)");
+            (*ConfigSetDefaultInt)(l_ConfigVideoGLideN64, "AspectRatio", 0, "Screen aspect ratio (0=stretch, 1=force 4:3, 2=force 16:9, 3=adjust)");
         }
 
         if(product_id != NULL) free(product_id);
